@@ -3,6 +3,7 @@ package com.example.a39_bottomtopactionbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.viewpager.widget.ViewPager;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +28,14 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_setting);
 
 
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navBottomView);
+        BottomNavViewHelper.disableShiftMode(bottomNavigationView);
+
+
+
     }
+
+
 
     private void setupViewPager(ViewPager viewPager) {
         SectionPagerAdapter adapter = new SectionPagerAdapter(getSupportFragmentManager());
