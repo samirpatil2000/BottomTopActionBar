@@ -8,8 +8,8 @@
         android:background="@color/white"
         tools:context=".MainActivity">
 
-<!--    -->
-<!--    This is Main Relative Layout of three sub Relative layout-->
+    <!--    -->
+    <!--    This is Main Relative Layout of three sub Relative layout-->
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,12 +27,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/white_grey_border_botton"
                     android:id="@+id/appBarLayout">
-                <com.google.android.material.tabs.TabLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tabs"
-                        app:layout_anchorGravity="center"
-                        app:layout_anchor="@+id/appBarLayout"/>
+
 
             </com.google.android.material.appbar.AppBarLayout>
 
@@ -45,13 +40,21 @@
                 android:layout_below="@+id/relLayoutTopBar"
                 android:layout_above="@+id/relLayoutBottomBar"
                 android:layout_height="match_parent">
-
-            <androidx.viewpager.widget.ViewPager
+            <TextView
                     android:layout_width="match_parent"
-                    android:id="@+id/viewpager"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewcrop" android:textColor="#0E0D0D" android:layout_centerInParent="true"
+                    android:textSize="30sp">
+                <!--                    android:text="Crop"-->
+                <!--                    android:textSize="30dp"-->
 
-            </androidx.viewpager.widget.ViewPager>
+
+            </TextView>
+            <Button
+                    android:text="Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/button2"/>
+
 
         </RelativeLayout>
 
