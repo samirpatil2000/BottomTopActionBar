@@ -57,8 +57,7 @@ public class FavoritesActivity extends AppCompatActivity {
                         Intent intent5 = new Intent(FavoritesActivity.this,SettingActivity.class);
                         startActivity(intent5);
                         break;
-                    default:
-                        throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
+
                 }
                 return false;
 
