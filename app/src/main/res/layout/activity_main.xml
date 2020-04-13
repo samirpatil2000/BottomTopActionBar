@@ -7,60 +7,132 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         tools:context=".MainActivity">
-    <com.google.android.material.appbar.AppBarLayout
+
+<!--    -->
+<!--    This is Main Relative Layout of three sub Relative layout-->
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/white_grey_border_botton"
-            android:id="@+id/appBarLayout">
-        <androidx.appcompat.widget.Toolbar
+            android:layout_height="match_parent"
+            android:id="@+id/relLayout">
+
+        <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_anchorGravity="center"
-                app:layout_anchor="@+id/appBarLayout"/>
+                android:id="@+id/relLayoutTopBar"
+                android:layout_alignParentTop="true"
+                android:layout_height="50dp">
 
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_height="wrap_content"
-            android:background="@drawable/white_grey_border_top" android:id="@+id/appBarLayout2">
-    </com.google.android.material.appbar.AppBarLayout>
-    <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_anchorGravity="center"
-            app:layout_anchor="@+id/appBarLayout2">
-        <LinearLayout
+            <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_grey_border_botton"
+                    android:id="@+id/appBarLayout">
+                <com.google.android.material.tabs.TabLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tabs"
+                        app:layout_anchorGravity="center"
+                        app:layout_anchor="@+id/appBarLayout"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingRight="15dp"
-                android:weightSum="100"
-                android:orientation="horizontal">
-            <ImageView android:layout_width="0dp"
-                         android:layout_height="match_parent"
-                         android:src="@drawable/ic_home"
-                         android:layout_weight="20"/>
-            <ImageView  android:layout_width="0dp"
-                         android:layout_height="match_parent"
-                         android:src="@drawable/ic_camera"
-                         android:layout_weight="20"/>
-            <ImageView  android:layout_width="0dp"
-                         android:layout_height="match_parent"
-                         android:src="@drawable/ic_crop"
-                         android:layout_weight="20"/>
-            <ImageView  android:layout_width="0dp"
-                         android:src="@drawable/ic_fav"
-                         android:layout_height="match_parent"
-                         android:layout_weight="20"/>
-            <ImageView  android:layout_width="0dp"
-                         android:src="@drawable/ic_delete"
-                         android:layout_height="match_parent"
-                         android:layout_weight="20"/>
+                android:id="@+id/relLayoutMiddle"
+                android:layout_below="@+id/relLayoutTopBar"
+                android:layout_above="@+id/relLayoutBottomBar"
+                android:layout_height="match_parent">
 
-        </LinearLayout>
+            <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:id="@+id/viewpager"
+                    android:layout_height="match_parent">
 
-    </androidx.appcompat.widget.Toolbar>
+            </androidx.viewpager.widget.ViewPager>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/relLayoutBottomBar"
+                android:layout_alignParentBottom="true"
+                android:layout_height="50dp">
+
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_grey_border_top" android:id="@+id/appBarLayout2">
+
+                <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_anchorGravity="center"
+                        app:layout_anchor="@+id/appBarLayout2">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="15dp"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+                        <ImageView android:layout_width="0dp"
+                                   android:layout_height="match_parent"
+                                   android:src="@drawable/ic_home"
+                                   android:layout_weight="20"/>
+                        <ImageView  android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_weight="20"/>
+                        <ImageView  android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_crop"
+                                    android:layout_weight="20"/>
+                        <ImageView  android:layout_width="0dp"
+                                    android:src="@drawable/ic_fav"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="20"/>
+                        <ImageView  android:layout_width="0dp"
+                                    android:src="@drawable/ic_delete"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="20"/>
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
